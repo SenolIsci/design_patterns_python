@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr  6 18:51:50 2021
 
-@author: senol.isci
-"""
 
 # In object_factory.py
 
@@ -103,17 +98,17 @@ config = {
     'local_music_location': '/usr/data/music'
 }
 
-pandora = music.services.get('PANDORA', **config)
+pandora = services.get('PANDORA', **config)
 pandora.test_connection()
-spotify = music.services.get('SPOTIFY', **config)
+spotify = services.get('SPOTIFY', **config)
 spotify.test_connection()
-local = music.services.get('LOCAL', **config)
+local = services.get('LOCAL', **config)
 local.test_connection()
 
-pandora2 = music.services.get('PANDORA', **config)
+pandora2 = services.get('PANDORA', **config)
 print(f'id(pandora) == id(pandora2): {id(pandora) == id(pandora2)}')
 
-spotify2 = music.services.get('SPOTIFY', **config)
+spotify2 = services.get('SPOTIFY', **config)
 print(f'id(spotify) == id(spotify2): {id(spotify) == id(spotify2)}')
 
 
