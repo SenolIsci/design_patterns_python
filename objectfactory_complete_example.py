@@ -93,7 +93,7 @@ services.register_builder('LOCAL', create_local_music_service)
 
 
 
-import music
+#import music
 
 config = {
     'spotify_client_key': 'THE_SPOTIFY_CLIENT_KEY',
