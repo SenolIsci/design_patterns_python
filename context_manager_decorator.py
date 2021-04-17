@@ -9,7 +9,7 @@ def open_file(name):
     try:
         yield f
     except:
-        #to catch exceptions here
+        #to catch exceptions here when it occurs later within the "with" statement
         raise
     finally:
         f.close()
