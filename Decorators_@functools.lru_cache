@@ -1,0 +1,30 @@
+This decorator has more features than the one you saw above. You should use @functools.lru_cache instead of writing your own cache decorator:
+
+import functools
+
+@functools.lru_cache(maxsize=4)
+def fibonacci(num):
+    print(f"Calculating fibonacci({num})")
+    if num < 2:
+        return num
+    return fibonacci(num - 1) + fibonacci(num - 2)
+    
+"""    
+>>> fibonacci(10)
+Calculating fibonacci(10)
+Calculating fibonacci(9)
+Calculating fibonacci(8)
+Calculating fibonacci(7)
+Calculating fibonacci(6)
+Calculating fibonacci(5)
+Calculating fibonacci(4)
+Calculating fibonacci(3)
+Calculating fibonacci(2)
+Calculating fibonacci(1)
+Calculating fibonacci(0)
+55
+
+>>> fibonacci(8)
+21
+
+"""
